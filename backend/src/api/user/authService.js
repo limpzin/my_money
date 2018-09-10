@@ -47,12 +47,12 @@ const signup = (req, res, next) => {
     const confirmPassword = req.body.confirm_password || ''
     
     if (!email.match(emailRegex)) {
-        return res.status(400).send({ errors: ['O e-mail informa está inválido'] })
+        return res.status(400).send({ errors: ['O e-mail informado está inválido'] })
     }
     if (!password.match(passwordRegex)) {
         return res.status(400).send({
             errors: [
-                "Senha precisar ter: uma letra maiúscula, uma letra minúscula, um n úmero, uma caractere especial(@#$%) e tamanho entre 6-20."
+                "Senha precisar ter: uma letra maiúscula, uma letra minúscula, um número, um caractere especial(@#$%) e tamanho entre 6-20."
             ]
         })
     }
